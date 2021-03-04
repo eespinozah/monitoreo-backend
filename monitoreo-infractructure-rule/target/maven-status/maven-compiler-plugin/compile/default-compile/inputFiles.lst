@@ -1,0 +1,13 @@
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\config\spring\SpringBootServiceConfig.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\resources\PointResource.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\config\spring\SpringBootService.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\db\springjdbc\repository\StorageJdbcRepository.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\dto\UserDto.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\mapper\PointMapper.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\dto\DocumentDto.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\mapper\StorageMapper.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\dto\PointDto.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\resources\StorageResource.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\db\springjdbc\repository\PointJdbcRepository.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\dto\StorageDto.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infractructure-rule\src\main\java\com\mrisk\monitoreo\infrastructure\rule\rest\spring\resources\DocumentResource.java

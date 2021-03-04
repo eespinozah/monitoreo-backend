@@ -1,0 +1,13 @@
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\dto\PointDto.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\config\spring\SpringBootServiceConfig.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\db\springjdbc\repository\StorageJdbcRepository.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\resources\PointResource.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\dto\UserDto.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\mapper\StorageMapper.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\resources\StorageResource.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\dto\DocumentDto.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\dto\StorageDto.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\resources\DocumentResource.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\config\spring\SpringBootService.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\db\springjdbc\repository\PointJdbcRepository.java
+C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-infrastructure-point\src\main\java\com\mrisk\monitoreo\infrastructure\point\rest\spring\mapper\PointMapper.java
