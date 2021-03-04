@@ -1,17 +1,11 @@
-com\mrisk\monitoreo\infrastructure\point\rest\spring\resources\StorageResource.class
 com\mrisk\monitoreo\infrastructure\point\rest\spring\mapper\PointMapper.class
 com\mrisk\monitoreo\infrastructure\point\rest\spring\mapper\StorageMapper.class
 com\mrisk\monitoreo\infrastructure\point\rest\spring\mapper\StorageMapperImpl.class
-com\mrisk\monitoreo\infrastructure\point\db\springjdbc\repository\PointJdbcRepository.class
-com\mrisk\monitoreo\infrastructure\point\config\spring\SpringBootServiceConfig.class
-com\mrisk\monitoreo\infrastructure\point\db\springjdbc\repository\StorageJdbcRepository.class
 com\mrisk\monitoreo\infrastructure\point\rest\spring\dto\PointDto.class
-com\mrisk\monitoreo\infrastructure\point\rest\spring\dto\UserDto.class
 com\mrisk\monitoreo\infrastructure\point\config\spring\SpringBootService.class
 com\mrisk\monitoreo\infrastructure\point\rest\spring\mapper\PointMapperImpl.class
 com\mrisk\monitoreo\infrastructure\point\db\springjdbc\repository\StorageJdbcRepository$1.class
 com\mrisk\monitoreo\infrastructure\point\rest\spring\dto\DocumentDto.class
 com\mrisk\monitoreo\infrastructure\point\rest\spring\resources\DocumentResource.class
 com\mrisk\monitoreo\infrastructure\point\db\springjdbc\repository\PointJdbcRepository$1.class
-com\mrisk\monitoreo\infrastructure\point\rest\spring\resources\PointResource.class
 com\mrisk\monitoreo\infrastructure\point\rest\spring\dto\StorageDto.class
