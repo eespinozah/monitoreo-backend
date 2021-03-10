@@ -6,7 +6,7 @@ import com.mrisk.monitoreo.domain.Storage;
 import com.mrisk.monitoreo.infrastructure.point.rest.spring.dto.StorageDto;
 
 @Mapper(componentModel = "spring")
-public interface StorageMapper {
+public interface StorageMapper { 
 
 	StorageDto toDto (Storage storage);
 	

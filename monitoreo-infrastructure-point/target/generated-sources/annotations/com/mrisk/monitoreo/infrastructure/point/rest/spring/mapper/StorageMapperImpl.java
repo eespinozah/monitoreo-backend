@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-03-04T14:25:50-0300",
+    date = "2021-03-10T13:25:07-0300",
     comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 1.3.1200.v20200916-0645, environment: Java 15.0.1 (Oracle Corporation)"
 )
 @Component
@@ -21,9 +21,17 @@ public class StorageMapperImpl implements StorageMapper {
 
         StorageDto storageDto = new StorageDto();
 
+        storageDto.setAlive( storage.getAlive() );
+        storageDto.setContentType( storage.getContentType() );
+        storageDto.setCreationTime( storage.getCreationTime() );
+        storageDto.setDestructionTime( storage.getDestructionTime() );
+        storageDto.setEncoding( storage.getEncoding() );
         storageDto.setId( storage.getId() );
+        storageDto.setModificationTime( storage.getModificationTime() );
         storageDto.setName( storage.getName() );
         storageDto.setPointId( storage.getPointId() );
+        storageDto.setTenaId( storage.getTenaId() );
+        storageDto.setType( storage.getType() );
 
         return storageDto;
     }
@@ -36,9 +44,17 @@ public class StorageMapperImpl implements StorageMapper {
 
         Storage storage = new Storage();
 
+        storage.setAlive( storageDto.getAlive() );
+        storage.setContentType( storageDto.getContentType() );
+        storage.setCreationTime( storageDto.getCreationTime() );
+        storage.setDestructionTime( storageDto.getDestructionTime() );
+        storage.setEncoding( storageDto.getEncoding() );
         storage.setId( storageDto.getId() );
+        storage.setModificationTime( storageDto.getModificationTime() );
         storage.setName( storageDto.getName() );
         storage.setPointId( storageDto.getPointId() );
+        storage.setTenaId( storageDto.getTenaId() );
+        storage.setType( storageDto.getType() );
 
         return storage;
     }

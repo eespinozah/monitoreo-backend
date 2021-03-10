@@ -20,7 +20,7 @@ public class DocumentResource {
 //  private final StorageMapper storageMapper;
   
   
-  @PostMapping("/points/{pointId}/document")
+  @PostMapping("/points/{pointId}/documents")
   public ResponseEntity<DocumentDto> saveDocument(@PathVariable Integer pointId, @RequestBody DocumentDto documentDto) {	  
 //    return new ResponseEntity<>(storageMapper.toDto(storageService.saveStorage(storageMapper.toDomain(documentDto))),HttpStatus.CREATED);
 	  return new ResponseEntity<>( HttpStatus.OK);

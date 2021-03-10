@@ -8,7 +8,7 @@ public interface StorageRepository {
 	
 	List<Storage> getStorageAll();
 	
-	Storage findById(Long id);
+	Storage findById(Integer id);
 
 	Storage save(Storage storage);
 

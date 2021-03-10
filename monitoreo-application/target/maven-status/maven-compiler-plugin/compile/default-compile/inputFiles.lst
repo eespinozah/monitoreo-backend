@@ -1,8 +1,8 @@
-C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\service\PointService.java
-C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\repository\StorageRepository.java
-C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\service\StorageService.java
-C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\repository\RuleRepository.java
-C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\service\ComponentService.java
-C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\repository\ComponentRepository.java
-C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\service\RuleService.java
-C:\mrisk\workspace\labs\demo\monitoreo\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\repository\PointRepository.java
+C:\Users\skate\git\monitoreo-backend\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\rule\service\ParameterService.java
+C:\Users\skate\git\monitoreo-backend\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\rule\repository\RuleRepository.java
+C:\Users\skate\git\monitoreo-backend\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\service\PointService.java
+C:\Users\skate\git\monitoreo-backend\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\repository\StorageRepository.java
+C:\Users\skate\git\monitoreo-backend\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\rule\repository\ParameterRepository.java
+C:\Users\skate\git\monitoreo-backend\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\service\StorageService.java
+C:\Users\skate\git\monitoreo-backend\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\rule\service\RuleService.java
+C:\Users\skate\git\monitoreo-backend\monitoreo-application\src\main\java\com\mrisk\monitoreo\application\repository\PointRepository.java

@@ -4,10 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -25,55 +24,61 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 public class StorageJdbcRepository implements StorageRepository {
-
-	private final JdbcTemplate jdbcTemplate;
-//	private final StorageEntityMapper storageMapper;
+	
 	@Autowired
-    public StorageJdbcRepository(DataSource dataSource) {
-      
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
-    }
-  public List<Storage> getStorageAll(){
-	  
-	  List<Storage> listStorage = new ArrayList<Storage>();
-	  return listStorage;
-  }
-  
-  @Override
-  public Storage findById(Long id) {
-    return null;
-  }
+	private final JdbcTemplate jdbcTemplate;
 
-  @Override
-  public Storage save(Storage storage) {
+	public List<Storage> getStorageAll(){
 	  
-//    return storageMapper.toDomain(storageRepository.save(storageMapper.toDbo(storage)));
+		List<Storage> listStorage = new ArrayList<Storage>();
+		return listStorage;
+	}
+	@Override
+	public Storage findById(Integer id) {
+		
+		Storage storage = new Storage();
+		storage.setId(1);
+		storage.setName("Testing GIF");
+		storage.setType("GIF");
+		storage.setPointId(7);
+		storage.setTenaId(1);
+		return storage;
+	}
+	@Override
+	public Storage save(Storage storage) {
 	  
-	  System.out.println(storage.getName());
-	  System.out.println(storage.getPointId());
-
-	  final String sql = "insert into storage (name, point_id) values (?, ?)";
-      final KeyHolder holder = new GeneratedKeyHolder();
+		final String sql = "INSERT INTO storage (tena_id, alive, creation_time, name, type, encoding, content_type, poin_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+		final KeyHolder holder = new GeneratedKeyHolder();
 
       jdbcTemplate.update(new PreparedStatementCreator() {
-
-          @Override
-          public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
+    	  @Override
+    	  public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
         	  
-              final PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-              ps.setString(1, storage.getName());
-              ps.setLong(2, storage.getPointId());
-              
-              return ps;
+    		  final PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+              preparedStatement.setInt(1, storage.getTenaId());
+              preparedStatement.setBoolean(2, storage.getAlive());
+              preparedStatement.setTimestamp(3, new Timestamp(storage.getCreationTime().getTimeInMillis()));
+              preparedStatement.setString(4, storage.getName());
+              preparedStatement.setString(5, storage.getType());
+              preparedStatement.setString(6, storage.getEncoding());
+              preparedStatement.setString(7, storage.getContentType());
+              preparedStatement.setInt(8, storage.getPointId());
+              return preparedStatement;
           }
       }, holder);
-
       
       Storage storageNew = new Storage();
-      storageNew.setId(holder.getKey().longValue());
+      
+      Integer newId;
+      if (holder.getKeys().size() > 1) {
+          newId = (Integer)holder.getKeys().get("stor_id");
+      } else {
+          newId= holder.getKey().intValue();
+      }
+      
+      storageNew.setId(newId);
       storageNew.setName(storage.getName());
       storageNew.setPointId(storage.getPointId());
       return storageNew;
-
   }
 }

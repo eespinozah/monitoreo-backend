@@ -1,28 +1,25 @@
 package com.mrisk.monitoreo.domain;
 
+import java.util.Calendar;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Storage {
 
-	private Long id;
+	private Integer id;
 	private String name;
-	private Long pointId;
+	private String type;
+	private String encoding;
+	private String contentType;
+	private Integer pointId;
 	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Long getPointId() {
-		return pointId;
-	}
-	public void setPointId(Long pointId) {
-		this.pointId = pointId;
-	}
-	
+	private Integer tenaId;
+    private Boolean alive = Boolean.TRUE;
+    private Calendar creationTime = Calendar.getInstance();
+    private Calendar modificationTime;
+    private Calendar destructionTime;
+    
 }

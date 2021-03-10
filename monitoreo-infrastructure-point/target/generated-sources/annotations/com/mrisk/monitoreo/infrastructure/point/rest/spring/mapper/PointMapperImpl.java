@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-03-04T14:25:50-0300",
+    date = "2021-03-10T13:25:07-0300",
     comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 1.3.1200.v20200916-0645, environment: Java 15.0.1 (Oracle Corporation)"
 )
 @Component
@@ -23,7 +23,10 @@ public class PointMapperImpl implements PointMapper {
 
         pointDto.setAccoId( point.getAccoId() );
         pointDto.setAlive( point.getAlive() );
+        pointDto.setCoordinateX( point.getCoordinateX() );
+        pointDto.setCoordinateY( point.getCoordinateY() );
         pointDto.setCreationTime( point.getCreationTime() );
+        pointDto.setDatum( point.getDatum() );
         pointDto.setDescription( point.getDescription() );
         pointDto.setDestructionTime( point.getDestructionTime() );
         pointDto.setModificationTime( point.getModificationTime() );
@@ -46,7 +49,10 @@ public class PointMapperImpl implements PointMapper {
 
         point.setAccoId( pointDto.getAccoId() );
         point.setAlive( pointDto.getAlive() );
+        point.setCoordinateX( pointDto.getCoordinateX() );
+        point.setCoordinateY( pointDto.getCoordinateY() );
         point.setCreationTime( pointDto.getCreationTime() );
+        point.setDatum( pointDto.getDatum() );
         point.setDescription( pointDto.getDescription() );
         point.setDestructionTime( pointDto.getDestructionTime() );
         point.setModificationTime( pointDto.getModificationTime() );

@@ -2,18 +2,18 @@ package com.mrisk.monitoreo.infrastructure.point.rest.spring.dto;
 
 import java.util.Calendar;
 
-import org.springframework.hateoas.RepresentationModel;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PointDto extends RepresentationModel<PointDto>{
+@ToString
+public class PointDto{
   private Integer poin_id;
   private Integer tenaId;
   private Boolean alive = Boolean.TRUE;
@@ -25,7 +25,7 @@ public class PointDto extends RepresentationModel<PointDto>{
   private String name;
   private String nameInternal;
   private String description;
-//  private String datum;
-//  private Double x;
-//  private Double y;
+  private Double coordinateX;
+  private Double coordinateY;
+  private String datum;
 }

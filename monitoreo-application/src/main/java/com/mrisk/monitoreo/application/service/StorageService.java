@@ -16,7 +16,7 @@ public class StorageService {
 	    return repository.getStorageAll();
   }
   
-  public Storage getStorage(Long id) {
+  public Storage getStorage(Integer id) {
     return repository.findById(id);
   }
 

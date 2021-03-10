@@ -1,8 +1,0 @@
-com\mrisk\monitoreo\application\service\RuleService.class
-com\mrisk\monitoreo\application\service\ComponentService.class
-com\mrisk\monitoreo\application\repository\StorageRepository.class
-com\mrisk\monitoreo\application\service\PointService.class
-com\mrisk\monitoreo\application\service\StorageService.class
-com\mrisk\monitoreo\application\repository\ComponentRepository.class
-com\mrisk\monitoreo\application\repository\PointRepository.class
-com\mrisk\monitoreo\application\repository\RuleRepository.class
