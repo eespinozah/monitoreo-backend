@@ -4,23 +4,24 @@ package com.mrisk.monitoreo.infrastructure.rule.config.spring;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.mrisk.monitoreo.application.repository.PointRepository;
-import com.mrisk.monitoreo.application.repository.StorageRepository;
-import com.mrisk.monitoreo.application.service.PointService;
-import com.mrisk.monitoreo.application.service.StorageService;
+import com.mrisk.monitoreo.application.rule.repository.ParameterRepository;
+import com.mrisk.monitoreo.application.rule.repository.RuleRepository;
+import com.mrisk.monitoreo.application.rule.service.ParameterService;
+import com.mrisk.monitoreo.application.rule.service.RuleService;
 
 @Configuration
 public class SpringBootServiceConfig {
 
 
   @Bean
-  public PointService pointService(PointRepository pointRepository) {
-    return new PointService(pointRepository);
+  public RuleService ruleService(RuleRepository ruleRepository) {
+    return new RuleService(ruleRepository);
   }
- 
+  
   @Bean
-  public StorageService storageService(StorageRepository storageRepository) {
-    return new StorageService(storageRepository);
+  public ParameterService parameterService(ParameterRepository parameterRepository) {
+    return new ParameterService(parameterRepository);
   }
+  
   
 }
