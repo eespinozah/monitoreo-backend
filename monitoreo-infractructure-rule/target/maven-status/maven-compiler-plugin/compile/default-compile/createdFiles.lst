@@ -1,6 +1,0 @@
-com\mrisk\monitoreo\infrastructure\rule\config\spring\SpringBootService.class
-com\mrisk\monitoreo\infrastructure\rule\rest\spring\mapper\ParameterMapperImpl.class
-com\mrisk\monitoreo\infrastructure\rule\config\spring\SpringBootServiceConfig.class
-com\mrisk\monitoreo\infrastructure\rule\rest\spring\dto\RuleDto.class
-com\mrisk\monitoreo\infrastructure\rule\rest\spring\dto\ParameterDto.class
-com\mrisk\monitoreo\infrastructure\rule\rest\spring\mapper\RuleMapperImpl.class
