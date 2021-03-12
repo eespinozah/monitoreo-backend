@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-03-11T16:45:10-0300",
-    comments = "version: 1.2.0.Final, compiler: Eclipse JDT (IDE) 1.3.1200.v20200916-0645, environment: Java 15.0.1 (Oracle Corporation)"
+    date = "2021-03-12T09:19:17-0300",
+    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 15.0.1 (Oracle Corporation)"
 )
 @Component
 public class StorageMapperImpl implements StorageMapper {
@@ -21,17 +21,17 @@ public class StorageMapperImpl implements StorageMapper {
 
         StorageDto storageDto = new StorageDto();
 
-        storageDto.setAlive( storage.getAlive() );
-        storageDto.setContentType( storage.getContentType() );
-        storageDto.setCreationTime( storage.getCreationTime() );
-        storageDto.setDestructionTime( storage.getDestructionTime() );
-        storageDto.setEncoding( storage.getEncoding() );
         storageDto.setId( storage.getId() );
-        storageDto.setModificationTime( storage.getModificationTime() );
         storageDto.setName( storage.getName() );
+        storageDto.setType( storage.getType() );
+        storageDto.setEncoding( storage.getEncoding() );
+        storageDto.setContentType( storage.getContentType() );
         storageDto.setPointId( storage.getPointId() );
         storageDto.setTenaId( storage.getTenaId() );
-        storageDto.setType( storage.getType() );
+        storageDto.setAlive( storage.getAlive() );
+        storageDto.setCreationTime( storage.getCreationTime() );
+        storageDto.setModificationTime( storage.getModificationTime() );
+        storageDto.setDestructionTime( storage.getDestructionTime() );
 
         return storageDto;
     }
@@ -44,17 +44,17 @@ public class StorageMapperImpl implements StorageMapper {
 
         Storage storage = new Storage();
 
-        storage.setAlive( storageDto.getAlive() );
-        storage.setContentType( storageDto.getContentType() );
-        storage.setCreationTime( storageDto.getCreationTime() );
-        storage.setDestructionTime( storageDto.getDestructionTime() );
-        storage.setEncoding( storageDto.getEncoding() );
         storage.setId( storageDto.getId() );
-        storage.setModificationTime( storageDto.getModificationTime() );
         storage.setName( storageDto.getName() );
+        storage.setType( storageDto.getType() );
+        storage.setEncoding( storageDto.getEncoding() );
+        storage.setContentType( storageDto.getContentType() );
         storage.setPointId( storageDto.getPointId() );
         storage.setTenaId( storageDto.getTenaId() );
-        storage.setType( storageDto.getType() );
+        storage.setAlive( storageDto.getAlive() );
+        storage.setCreationTime( storageDto.getCreationTime() );
+        storage.setModificationTime( storageDto.getModificationTime() );
+        storage.setDestructionTime( storageDto.getDestructionTime() );
 
         return storage;
     }

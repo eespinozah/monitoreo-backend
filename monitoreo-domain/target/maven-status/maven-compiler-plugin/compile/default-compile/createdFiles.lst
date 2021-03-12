@@ -1,0 +1,10 @@
+com\mrisk\monitoreo\domain\Location.class
+com\mrisk\monitoreo\rule\domain\ParameterUnit.class
+com\mrisk\monitoreo\rule\domain\Parameter.class
+com\mrisk\monitoreo\domain\Point.class
+com\mrisk\monitoreo\domain\Component.class
+com\mrisk\monitoreo\domain\Plan.class
+com\mrisk\monitoreo\domain\Storage.class
+com\mrisk\monitoreo\domain\Document.class
+com\mrisk\monitoreo\rule\domain\Rule.class
+com\mrisk\monitoreo\domain\Measurement.class

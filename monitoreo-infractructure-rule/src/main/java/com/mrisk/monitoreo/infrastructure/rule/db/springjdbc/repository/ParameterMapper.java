@@ -13,7 +13,7 @@ public class ParameterMapper implements RowMapper<Parameter> {
     public Parameter mapRow(ResultSet rs, int rowNum) throws SQLException {
     	
         final Parameter parameter = new Parameter();
-        parameter.setId(rs.getInt("id"));  
+        parameter.setId(rs.getInt("para_id"));  
         parameter.setName(rs.getString("name"));
         parameter.setSymbol(rs.getString("name_internal"));
         parameter.setUnit(rs.getString("name"));

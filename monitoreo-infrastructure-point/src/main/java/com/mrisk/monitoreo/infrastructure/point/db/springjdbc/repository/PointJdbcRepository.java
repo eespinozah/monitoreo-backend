@@ -38,14 +38,13 @@ public class PointJdbcRepository implements PointRepository {
 	  return listPoint;
   }
   
-@SuppressWarnings("deprecation")
 @Override
   public Point singleSelectPoint(Integer id) {
 	  
 	  String sql = "SELECT tena_id, poin_id, alive, creation_time, modification_time, destruction_time, acco_id, name, name_internal, sect_id, description FROM point where poin_id = ?";
       try {
-    	
-          return jdbcTemplate.queryForObject(sql, new Object[]{id}, new PointMapper());
+//    	  jdbcTemplate.queryForObject("select * from student_id = ?", new PointMapper(), id);
+          return jdbcTemplate.queryForObject(sql, new PointMapper(), id);
       } catch (EmptyResultDataAccessException noResult) {
           
           return null;
