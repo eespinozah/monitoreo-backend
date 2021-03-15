@@ -22,10 +22,4 @@ public class ParameterService {
         throw new DataNotFoundException(DATA_NOT_FOUND);
     }
 
-    public Parameter saveParameter(Parameter parameter) {
-
-        return repository.save(parameter);
-
-    }
-
 }

@@ -2,14 +2,11 @@ package com.mrisk.monitoreo.infrastructure.rule.db.springjdbc.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
-import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Service;
 
 import com.mrisk.monitoreo.application.rule.repository.ParameterRepository;
+import com.mrisk.monitoreo.infrastructure.rule.db.springjdbc.mapper.repository.ParameterMapper;
 import com.mrisk.monitoreo.rule.domain.Parameter;
 
 import lombok.RequiredArgsConstructor;
@@ -18,34 +15,23 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class ParameterJdbcRepository implements ParameterRepository {
 
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
-	@Override
-	public Parameter save(Parameter parameter) {
 
-		SimpleJdbcInsert insert = new SimpleJdbcInsert(this.jdbcTemplate).withTableName("parameter")
-				.usingGeneratedKeyColumns("para_id");
+    @Override
+    public Parameter singleSelectParameter(Integer id) {
 
-		SqlParameterSource parameters = new BeanPropertySqlParameterSource(parameter);
-		Number newId = insert.executeAndReturnKey(parameters);
-		parameter.setId(newId.intValue());
-		return parameter;
-	}
+        String sql = "SELECT p.tena_id, para_id, p.alive, p.creation_time, p.modification_time, p.destruction_time, p.csub_id, p.name, symbol,pu.name unit_name, discrete FROM parameter p join parameter_unit pu on (p.unit_id = pu.unit_id) where para_id=?";
+        try {
 
-	@Override
-	public Parameter singleSelectParameter(Integer id) {
+            return jdbcTemplate.queryForObject(sql, new ParameterMapper(), id);
 
-		String sql = "SELECT tena_id, para_id, alive, creation_time, modification_time, destruction_time, csub_id, name, symbol, unit_id, discrete FROM parameter where para_id = ?";
-		try {
+        } catch (EmptyResultDataAccessException noResult) {
 
-			return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Parameter>(Parameter.class), id);
+            return null;
+        }
 
-		} catch (EmptyResultDataAccessException noResult) {
-
-			return null;
-		}
-
-	}
+    }
 
 }

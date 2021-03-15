@@ -1,5 +1,6 @@
 package com.mrisk.monitoreo.infrastructure.rule.db.springjdbc.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class RuleJdbcRepository implements RuleRepository {
 	@Override
 	public List<Rule> getRuleAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override

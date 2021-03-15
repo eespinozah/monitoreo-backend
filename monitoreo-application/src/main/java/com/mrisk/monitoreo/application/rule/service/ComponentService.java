@@ -1,5 +1,6 @@
 package com.mrisk.monitoreo.application.rule.service;
 
+import java.util.List;
 import java.util.Objects;
 
 import com.mrisk.monitoreo.application.rule.exception.DataNotFoundException;
@@ -17,6 +18,14 @@ public class ComponentService {
         Component objComponent = repository.findById(id);
         if (Objects.nonNull(objComponent)) {
             return objComponent;
+        }
+        throw new DataNotFoundException(DATA_NOT_FOUND);
+    }
+
+    public List<Component> findComponents() {
+        List<Component> listComponent = repository.findComponents();
+        if (!listComponent.isEmpty()) {
+            return listComponent;
         }
         throw new DataNotFoundException(DATA_NOT_FOUND);
     }

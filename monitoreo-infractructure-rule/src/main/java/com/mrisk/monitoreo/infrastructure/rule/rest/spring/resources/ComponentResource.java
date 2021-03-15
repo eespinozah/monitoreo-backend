@@ -1,7 +1,9 @@
 package com.mrisk.monitoreo.infrastructure.rule.rest.spring.resources;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,14 +30,16 @@ public class ComponentResource {
 
         EntityModel<ComponentDTO> resource = EntityModel.of(parameterDto);
 
-        addSelfLink(resource);
-
         return new ResponseEntity<>((resource), HttpStatus.OK);
     }
 
-    private void addSelfLink(EntityModel<ComponentDTO> resource) {
-        resource.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass())
-                .findComponentById(resource.getContent().getCompId().intValue())).withSelfRel());
+    @GetMapping("/components")
+    public ResponseEntity<List<ComponentDTO>> findComponents() {
+
+        List<ComponentDTO> listParameters = componentService.findComponents().stream()
+                .map(c -> Converter.getMapper().map(c, ComponentDTO.class)).collect(Collectors.toList());
+
+        return new ResponseEntity<>(listParameters, HttpStatus.OK);
     }
 
 }

@@ -15,7 +15,7 @@ import lombok.ToString;
 @ToString
 public class Parameter {
 
-    private Integer id;
+    private Integer paraId;
     private String name;
     private String symbol;
     private String unit;
